@@ -53,8 +53,7 @@ https://www.microsoft.com/en-us/download/details.aspx?id=49117
 
  - Place it inside your Office setup folder (example: `C:\MS OFFICE SETUP`)
 
-
- Here is the improved **README.md section with complete CMD commands**, including download, install, and optional activation preparation:
+ 
 
 ````md
 ## COMMANDS IN CMD
