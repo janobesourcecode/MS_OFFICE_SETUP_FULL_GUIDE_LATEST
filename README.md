@@ -1,77 +1,93 @@
-# Microsoft Office Deployment Tool Setup Guide
-
-This guide explains how to download, configure, and install Microsoft Office using the Office Deployment Tool and a custom configuration XML file.
+Here is your **fixed and professionally formatted guide**, with clearer wording, correct structure, and improved readability:
 
 ---
 
-## Step 1: Create Configuration File
+# Microsoft Office Deployment Tool Setup Guide
+
+This guide explains how to download, configure, and install Microsoft Office using the Office Deployment Tool (ODT) with a custom configuration XML file.
+
+---
+
+## Step 1: Create the Configuration File
 
 Use the Microsoft Office Customization Tool:
 
-Configuration Tool:  
-https://config.office.com/deploymentsettings
+**Configuration Tool:**
+[https://config.office.com/deploymentsettings](https://config.office.com/deploymentsettings)
 
-### Configuration Steps:
+### Configuration Steps
 
-1. **Architecture**
-   - Select your preferred architecture:
-     - `64-bit` (Recommended)
-     - `32-bit`
+1. **Select Architecture**
+   Choose your preferred architecture:
 
-![alt text](image.png)
+   * **64-bit** (Recommended)
+   * 32-bit
 
-2. **Products**
-   - Select:
-     - Office Suites → **Office Professional Plus (Volume License)**
-![alt text](image-1.png)
+2. **Select Product**
 
-3. **Language**
-   - Select:
-     - English
-![alt text](image-2.png)
+   * Office Suites → **Office Professional Plus (Volume License)**
+
+3. **Select Language**
+
+   * Choose: **English**
+
 4. **Export Configuration**
-   - Click **Export**
-![alt text](image-3.png)
-   - Save the file as:
-     ```
-     Configuration.xml
-     ```
-   - Place it inside your Office setup folder (example: `C:\MS OFFICE SETUP`)
+
+   * Click **Export**
+   * Save the file as:
+
+   ```
+   Configuration.xml
+   ```
+
+   * Place it in your Office setup folder, for example:
+
+   ```
+   C:\MS OFFICE SETUP
+   ```
 
 ---
 
-## Step 2: Download Office Deployment Tool
+## Step 2: Download Office Deployment Tool (ODT)
 
-Download the tool from Microsoft:
+Download from Microsoft:
 
-https://www.microsoft.com/en-us/download/details.aspx?id=49117
+[https://www.microsoft.com/en-us/download/details.aspx?id=49117](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
 
-### After downloading:
+### After Downloading
 
 1. Run the downloaded file
-2. Extract contents to:
+2. Extract the contents to your Office setup folder:
 
- - Place it inside your Office setup folder (example: `C:\MS OFFICE SETUP`)
+```
+C:\MS OFFICE SETUP
+```
 
- 
+Your folder should now contain:
 
-````md
-## COMMANDS IN CMD
+```
+C:\MS OFFICE SETUP
+│-- setup.exe
+│-- Configuration.xml
+```
 
-Run Command Prompt (CMD) as Administrator, then execute the following commands:
+---
 
-### Step 1: Go to Root Directory
-Navigate to the root of drive C:
+## Step 3: Run Commands in Command Prompt (Administrator)
+
+Open **Command Prompt as Administrator**, then run the following commands:
+
+---
+
+### Step 3.1: Go to Drive C Root
 
 ```cmd
 CD\
-````
+```
 
 ---
 
-### Step 2: Go to Office Setup Folder
-
-Change directory to your Office Deployment Tool folder:
+### Step 3.2: Go to Office Setup Folder
 
 ```cmd
 CD "C:\MS OFFICE SETUP"
@@ -79,42 +95,24 @@ CD "C:\MS OFFICE SETUP"
 
 ---
 
-### Step 3: Download Office Installation Files (Recommended for Offline Install)
+### Step 3.3: Download Office Installation Files (Offline Installer)
 
-This will download all required Office installation files based on your Configuration.xml:
+This downloads all required Office files based on your Configuration.xml:
 
 ```cmd
 Setup.exe /download Configuration.xml
 ```
 
-Wait until the download completes. This may take several minutes depending on your internet speed.
+Notes:
 
----
+* This creates an **Office** folder containing installation files
+* Download time depends on your internet speed
+* Do not close Command Prompt during download
 
-### Step 4: Install Microsoft Office (Silent Installation)
-
-Run the configuration command to install Office silently:
-
-```cmd
-Setup.exe /configure Configuration.xml
-```
-
-This will install:
-
-* Office Professional Plus (Volume License)
-* Selected language (English)
-* Selected architecture (32-bit or 64-bit)
-
-No user interaction is required.
-
----
-
-### Optional: Check Installation Folder
-
-After download, your folder should look like this:
+Expected folder structure after download:
 
 ```
-C:\MS OFFICE SETUP\
+C:\MS OFFICE SETUP
 │-- setup.exe
 │-- Configuration.xml
 │-- Office\
@@ -123,12 +121,43 @@ C:\MS OFFICE SETUP\
 
 ---
 
-### Notes
+### Step 3.4: Install Microsoft Office (Silent Installation)
 
-* Always run CMD as Administrator
+Run the install command:
+
+```cmd
+Setup.exe /configure Configuration.xml
+```
+
+This will install:
+
+* Office Professional Plus (Volume License)
+* English language
+* Selected architecture (32-bit or 64-bit)
+* Silent installation (no user interaction required)
+
+---
+
+## Important Notes
+
+* Always run **Command Prompt as Administrator**
 * Do not close CMD during download or installation
 * Internet is required for the download step
 * Installation runs silently in the background
+* You can reuse the downloaded files for offline installation on other computers
+
+---
+
+## Optional: Example of Complete Folder Structure
 
 ```
- 
+C:\MS OFFICE SETUP
+│-- setup.exe
+│-- Configuration.xml
+│-- Office
+│   ├── Data
+│   ├── Office
+│   └── (other installation files)
+```
+
+--- 
