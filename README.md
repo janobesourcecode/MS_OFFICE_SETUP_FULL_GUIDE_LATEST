@@ -18,6 +18,8 @@ https://config.office.com/deploymentsettings
      - `64-bit` (Recommended)
      - `32-bit`
 
+     ![alt text](image.png)
+
 2. **Products**
    - Select:
      - Office Suites → **Office Professional Plus (Volume License)**
