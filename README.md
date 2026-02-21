@@ -18,18 +18,20 @@ https://config.office.com/deploymentsettings
      - `64-bit` (Recommended)
      - `32-bit`
 
-     ![alt text](image.png)
+![alt text](image.png)
 
 2. **Products**
    - Select:
      - Office Suites → **Office Professional Plus (Volume License)**
+![alt text](image-1.png)
 
 3. **Language**
    - Select:
      - English
-
+![alt text](image-2.png)
 4. **Export Configuration**
    - Click **Export**
+![alt text](image-3.png)
    - Save the file as:
      ```
      Configuration.xml
@@ -48,3 +50,5 @@ https://www.microsoft.com/en-us/download/details.aspx?id=49117
 
 1. Run the downloaded file
 2. Extract contents to:
+
+ - Place it inside your Office setup folder (example: `C:\MS OFFICE SETUP`)
