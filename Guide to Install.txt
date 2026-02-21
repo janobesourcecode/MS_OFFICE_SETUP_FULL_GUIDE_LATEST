@@ -1,0 +1,24 @@
+Based on the content of the image, here is the extracted setup guide:
+
+**TUTORIAL LINKS**
+1.  **Configuration Tool:** `https://config.office.com/deploymentsettings` (Use this to create your configuration XML file)
+
+	1.Architecture
+		Which architecture do you want to deploy?
+		select 64 or 32
+	2.Products *
+		Which products and apps do you want to deploy?
+		Office Suites
+		choose - professional plus - volume license
+	3. choose language
+		english
+	4. click export
+
+
+2.  **Download Tool:** `https://www.microsoft.com/en-us/download/details.aspx?id=49117` (Use this to download the Office Deployment Tool)
+
+**COMMANDS IN CMD**
+Run these commands in Command Prompt (CMD) as an Administrator:
+1.  `CD\` (Navigate to the root of the C: drive)
+2.  `CD c:\MS OFFICE SETUP` (Change to your Office setup folder)
+3.  `Setup.exe /configure Configuration.xml` (Execute the silent installation using your configuration file)
